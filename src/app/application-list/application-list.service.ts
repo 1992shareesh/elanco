@@ -10,8 +10,4 @@ export class ApplicationListService {
   getRawData(): Observable<any> {
     return this.httpClient.get(AppConstants.BASE_API + '/api/raw');
   }
-
-  getApplication(): Observable<any> {
-    return this.httpClient.get(AppConstants.BASE_API + '/api/applications');
-  }
 }
