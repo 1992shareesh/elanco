@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
         <div *ngFor="let data of rawDataList; let i=index;" class="col-3" [routerLink]="['/application', data.ResourceGroup]">
-            <div class="card text-white mb-3" [ngClass]="i === 0 ? 'bg-success' : data.ConsumedQuantity > 10 ? 'bg-info' : data.ConsumedQuantity >= 1 ? 'bg-warning' : 'bg-secondary'" style="max-width: 18rem;">
+            <div class="card text-white mb-3 shadow cursor-pointer" [ngClass]="i === 0 ? 'bg-success' : data.ConsumedQuantity > 10 ? 'bg-info' : data.ConsumedQuantity >= 1 ? 'bg-warning' : 'bg-secondary'" style="max-width: 18rem;">
                 <div class="card-header" [title]="data.ResourceGroup">{{data.ResourceGroup?.substr(0, 15) +
                     (data.ResourceGroup.length > 15 ? "..." : "")}} <span class="float-end">{{data.Date}}</span></div>
                 <div class="card-body">
